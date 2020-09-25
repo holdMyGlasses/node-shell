@@ -18,9 +18,9 @@ process.stdin.on('data', (data) => {
         ls()
     }
 console.log("CMD:", cmd)
-    if(cmd === `cat ${file}`){
-        console.log(file, "FIIILLEEE")
-        cat(file)
+    if(cmd[0] === 'c' && cmd[1] === 'a' && cmd[2] === 't'){
+        let command = cmd.split(" ")
+        cat(command[1])
     }
 
 
